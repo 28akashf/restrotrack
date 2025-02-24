@@ -3,6 +3,8 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -10,10 +12,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    LoginModule,
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
