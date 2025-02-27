@@ -1,0 +1,25 @@
+<diV>
+     <h3>Menu</h3>
+</diV>
+<div >
+    <mat-card  class="example-card" appearance="outlined" *ngFor="let i of menuData">
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-title>  {{i.name}} {{i.price}}</mat-card-title>
+          <mat-card-subtitle>  {{i.category}}</mat-card-subtitle>
+          <mat-card-subtitle>  {{i.cuisine}}</mat-card-subtitle>
+        </mat-card-header>
+   
+        <img mat-card-image src="pizza.jpg" alt="Image">
+        <mat-card-content>
+          <p>
+              {{i.desc}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>REMOVE</button>
+          <button mat-button>MODIFY</button>
+        </mat-card-actions>
+      </mat-card>
+
+</div>
