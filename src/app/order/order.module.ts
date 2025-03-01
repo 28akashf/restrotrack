@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrderComponent } from './order.component';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -9,7 +10,8 @@ import { OrderComponent } from './order.component';
     OrderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatTableModule
   ]
 })
 export class OrderModule { }

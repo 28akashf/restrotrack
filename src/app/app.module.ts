@@ -11,9 +11,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatCardActions, MatCardModule } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MenuModule } from './menu/menu.module';
 import { MenuComponent } from './menu/menu.component';
+
+import { InventoryModule } from './inventory/inventory.module';
+import { BillingComponent } from './billing/billing.component';
+import { BillingModule } from './billing/billing.module';
+import { OrderModule } from './order/order.module';
+import { StaffModule } from './staff/staff.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,10 @@ import { MenuComponent } from './menu/menu.component';
     BrowserModule,
     LoginModule,
     MenuModule,
+    InventoryModule,
+    BillingModule,
+    OrderModule,
+    StaffModule,
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
