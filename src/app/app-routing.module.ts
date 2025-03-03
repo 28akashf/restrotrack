@@ -6,6 +6,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { MenuComponent } from './menu/menu.component';
 import { OrderComponent } from './order/order.component';
 import { BillingComponent } from './billing/billing.component';
+import { NeworderComponent } from './order/neworder/neworder.component';
+import { NewstaffComponent } from './staff/newstaff/newstaff.component';
 
 const routes: Routes = [
   { path:'login', component:LoginComponent},
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path:'menu', component:MenuComponent},
   { path:'order', component:OrderComponent},
   { path:'billing', component:BillingComponent},
+  { path:'neworder', component:NeworderComponent},
+  { path:'newstaff', component:NewstaffComponent},
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
 ];
 

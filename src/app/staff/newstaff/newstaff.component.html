@@ -1,0 +1,57 @@
+<form [formGroup]="staffForm">
+    <div class="row">
+        <mat-form-field class="row">
+          <mat-label>Employee Id</mat-label>
+          <input matInput placeholder="empid" formControlName="empid">
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="fname" formControlName="fname">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input  matInput placeholder="lname" formControlName="lname">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input  matInput placeholder="email" formControlName="email">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Age</mat-label>
+            <input matInput placeholder="age" formControlName="age">
+          </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Gender</mat-label>
+        <mat-select placeholder="gender" formControlName="gender">
+          <mat-option *ngFor="let d of genderList" [value]="d">
+            {{ d }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+          <mat-label>Role</mat-label>
+          <mat-select placeholder="role" formControlName="role" multiple>
+            <mat-option *ngFor="let d of roleList" [value]="d">
+              {{ d }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+ 
+    <div>
+         <button class="info">Add Staff</button>
+    </div>
+</form>
+{{staffForm.value | json}}

@@ -1,0 +1,78 @@
+<form [formGroup]="neworderForm">
+    <div class="row">
+        <mat-form-field class="row">
+          <mat-label>OrderId</mat-label>
+          <input matInput placeholder="orderId" formControlName="orderId">
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>TableNo</mat-label>
+            <input type="tableNo" matInput placeholder="tableNo" formControlName="tableNo">
+          </mat-form-field>
+    </div>
+    <!-- <div class="row">
+        <mat-form-field>
+            <mat-label>D</mat-label>
+            <input type="password" matInput placeholder="Password" formControlName="items">
+          </mat-form-field>
+    </div> -->
+    <div>
+      <mat-form-field>
+        <mat-label>Drinks & Snacks</mat-label>
+        <mat-select placeholder="drinknsnack" formControlName="drinknsnack" multiple>
+          <!-- <mat-select-trigger>
+            {{drinknsnack.value?.[0] || ''}}
+            @if ((drinknsnack.value?.length || 0) > 1) {
+              <span class="example-additional-selection">
+                (+{{(drinknsnack.value?.length || 0) - 1}} {{drinknsnack.value?.length === 2 ? 'other' : 'others'}})
+              </span>
+            }
+          </mat-select-trigger> -->
+          <mat-option *ngFor="let d of drinknsnackList" [value]="d">
+            {{ d }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Starters</mat-label>
+        <mat-select formControlName="starter" multiple>
+      
+        <mat-option *ngFor="let s of starterList" [value]="s">
+          {{s}}
+        </mat-option>
+      
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Main Course</mat-label>
+        <mat-select formControlName="maincourse" multiple>
+      
+        <mat-option *ngFor="let m of maincourseList" [value]="m">
+          {{m}}
+        </mat-option>
+      
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Desert</mat-label>
+        <mat-select formControlName="desert" multiple>
+      
+        <mat-option *ngFor="let d of desertList" [value]="d">
+          {{d}}
+        </mat-option>
+      
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+         <button class="info">Submit Order</button>
+    </div>
+</form>
+{{neworderForm.value | json}}
