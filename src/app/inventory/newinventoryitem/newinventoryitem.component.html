@@ -1,0 +1,47 @@
+<form [formGroup]="inventoryForm">
+    <div class="row">
+        <mat-form-field class="row">
+          <mat-label>Item Id</mat-label>
+          <input matInput placeholder="invid" formControlName="invid">
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Item Name</mat-label>
+            <input matInput placeholder="itemname" formControlName="itemname">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput placeholder="desc" formControlName="desc">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Quantity</mat-label>
+            <input matInput placeholder="qty" formControlName="qty">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Unit</mat-label>
+            <input matInput placeholder="unit" formControlName="unit">
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+          <mat-label>Category</mat-label>
+          <mat-select placeholder="category" formControlName="category">
+            <mat-option *ngFor="let d of categoryList" [value]="d">
+              {{ d }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+ 
+    <div>
+         <button mat-raised-button>Add Item</button>
+    </div>
+</form>
+{{inventoryForm.value | json}}

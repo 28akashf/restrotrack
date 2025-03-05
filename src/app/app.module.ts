@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MenuModule } from './menu/menu.module';
 import { MenuComponent } from './menu/menu.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { InventoryModule } from './inventory/inventory.module';
 import { BillingComponent } from './billing/billing.component';
@@ -42,7 +43,8 @@ import { StaffModule } from './staff/staff.module';
     MatIconModule,
     MatListModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
     
 ],
   providers: [

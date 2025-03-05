@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-neworder',
@@ -13,7 +14,7 @@ export class NeworderComponent implements OnInit {
       starterList:string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
       maincourseList:string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
       desertList:string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
-      constructor(private fb:FormBuilder) {
+      constructor(private fb:FormBuilder,private _location: Location) {
              
       }
   ngOnInit(): void {
@@ -25,6 +26,10 @@ export class NeworderComponent implements OnInit {
       maincourse:[''],
       desert:['']
     });
+  }
+
+  goback(){
+    this._location.back();
   }
 }
 

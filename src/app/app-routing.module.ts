@@ -8,6 +8,8 @@ import { OrderComponent } from './order/order.component';
 import { BillingComponent } from './billing/billing.component';
 import { NeworderComponent } from './order/neworder/neworder.component';
 import { NewstaffComponent } from './staff/newstaff/newstaff.component';
+import { NewinventoryitemComponent } from './inventory/newinventoryitem/newinventoryitem.component';
+import { NewmenuitemComponent } from './menu/newmenuitem/newmenuitem.component';
 
 const routes: Routes = [
   { path:'login', component:LoginComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path:'billing', component:BillingComponent},
   { path:'neworder', component:NeworderComponent},
   { path:'newstaff', component:NewstaffComponent},
+  { path:'addinvitem', component:NewinventoryitemComponent},
+  { path:'addmenuitem', component:NewmenuitemComponent},
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
 ];
 
